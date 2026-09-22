@@ -31,7 +31,7 @@ var sobrenome = "Silva"; // variavel do tipo string. (Evitar o uso de var, pois 
 // case sensitive, ou seja, diferencia maiusculas de minusculas.
 
 var a = 3 
-let b = 4 
+let b1 = 4 
 
 var a = 30
 let b = 40
@@ -47,7 +47,13 @@ const c = 5
 // c = 50 // erro, pois constante não pode ser alterada.   
 console.log(c) // 5;  
 
+//aula 4 - Tipos de dados, tipagem fraca e dinamica.
 
+let nome1 = "Lucas"; 
+let idade1 = 20;
+let altura1 = 1.80;
+let estudante1 = true;
 
+console.log(typeof nome1, typeof idade1, typeof altura1, typeof estudante1);
 
 
