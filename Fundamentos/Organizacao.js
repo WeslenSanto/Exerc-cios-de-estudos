@@ -98,7 +98,7 @@ console.log(7 / 0 ) // infinity
 console.log("10" / 2) // o javascript identifica que e um numedo e retorna o valor, mas se tiver . algum outro numero ele vai retornar como nao é um numero NaN.
 console.log("show!" * 2) // NaN
 console.log(0.1 + 0.7) // 0.7999999999999999    
-console.log(10.toString()) // 1010
+console.log(10()) // 1010
 console.log((10.345).toFixed(2))
 
 // aula 6 Usando API Math, e Operações e API String 
@@ -110,5 +110,87 @@ console.log(area.toFixed(2)) // 98.52
 const nome2 = "SiloPrime3"
 console.log(nome2.charAt(9)) // 9
 console.log(nome2.charCodeAt(9)) // 80
-console.log(nome2.indexOf('3')) // 9        
+console.log(nome2.indexOf('3')) // 9  
 
+console.log(nome2.substring(0, 3)) // Sil
+console.log(nome2.substring(0, 3).concat("Prime")) // SilPrime
+console.log(nome2.replace('3', '')) // SiloPrime    
+
+console.log('Ana,Maria,Pedro'.split(',')) // [ 'Ana', 'Maria', 'Pedro' ]
+
+
+//aula 7 - Template String
+
+const nome3 = "Lucas"
+const idade3 = 20
+console.log(`Meu nome é ${nome3} e minha idade é ${idade3}`) // Meu nome é Lucas e minha idade é 20
+
+const nome4 = 'rebeca'
+const concatenacao = 'olá' + nome4 + '!'
+const template = `
+    olá
+    ${nome4}!`
+console.log(concatenacao, template) // olá rebeca! olá rebeca!  
+
+//expressoes
+
+const up = texto => texto.toUpperCase() // arrow function
+console.log(`Ei... ${up('cuidado')}!`) // Ei... CUIDADO!       
+
+// aula 8 tipos Booleanos
+
+let isAtivo = false 
+console.log(isAtivo)
+
+isAtivo = true
+console.log(isAtivo)
+
+isAtivo = 1
+console.log(!! isAtivo)
+
+// resultados verdadeiro
+
+console.log('os verdadeiro...')
+console.log(!!3)
+console.log(!!-1)
+console.log(!!'')
+console.log(!![])
+console.log(!!{})
+console.log(!! Infinity)
+console.log(!!(isAtivo = true))
+
+// resultados falsos
+
+console.log('os falsoes...')
+console.log(!!0)
+console.log(!!'')
+console.log(!!null)
+console.log(!!NaN)
+console.log(!!undefined)
+console.log(!!(isAtivo = false))
+
+console.log('pra finalizar...')
+console.log(!!('' || null || ' ' ))
+
+let nomeclatura = ''
+console.log(nomeclatura || 'desconhecido')
+
+
+//Aula 9 Arry 
+
+const valores = [7.7,8.9,6.3,9.2]
+console.log(valores[0],valores[3])
+console.log(valores[4])
+
+valores = [4] = 10  
+console.log(valores)
+console.log(valores.length)
+
+valores.Push({id: 3}, false, null, 'teste' )
+console.log(valores)
+
+console.log(valores.pop())
+delete valores[0]
+console.log(valores)
+
+console.log(typeof valores)
